@@ -1,20 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AquaPure Systems
 
-# Run and deploy your AI Studio app
+AquaPure Systems is a React-based application that provides a user-friendly interface for customers to explore and purchase water purification systems. The application is designed to be scalable, maintainable, and easy to use.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/11xu4casapR-q0pA8zUt127Vupt0vIXAx
+- Product listing with filtering and sorting capabilities
+- Product detail pages with descriptions, images, and specifications
+- User-friendly interface for customers to compare products
+- Contact form for customers to inquire about products or services
+- Responsive design for optimal user experience on desktop and mobile devices
 
-## Run Locally
+## Technologies Used
 
-**Prerequisites:**  Node.js
+- React
+- React Router
+- React Context API
+- React Hooks
+- Reactstrap
+- Lucide Icons
+- Vite
 
+## Installation
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Clone the repository and install the dependencies by running `npm install`
+
+## Running the Application
+
+Run `npm start` to start the application in development mode.
+
+## Deployment
+
+Run `npm run build` to build the application, and then deploy the build folder to a web server.
+
+## Testing
+
+Run `npm test` to run unit tests and integration tests for the application.
+
+## Contributing
+
+Contributions are welcome. Please fork the repository and submit a pull request with your changes. Make sure to follow the coding standards and best practices for the project.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

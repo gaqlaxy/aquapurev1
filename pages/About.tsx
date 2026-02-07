@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { Target, Heart, Award, Users } from 'lucide-react';
+import { Target, Heart, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About: React.FC = () => {

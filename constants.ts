@@ -149,4 +149,5 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const CONTACT_PHONE = "15550123456"; // Dummy number for WhatsApp
+export const CONTACT_PHONE_DISPLAY = "+1 (555) 012-3456";
 export const CONTACT_EMAIL = "sales@aquapure-example.com";

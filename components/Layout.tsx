@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Droplets, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Scale } from 'lucide-react';
 import Button from './Button';
 import WhatsAppFloat from './WhatsAppFloat';
-import { CONTACT_PHONE, CONTACT_EMAIL } from '../constants';
+import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY, CONTACT_EMAIL } from '../constants';
 import { useCompare } from '../contexts/CompareContext';
 
 interface LayoutProps {
@@ -169,7 +169,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-brand-500 flex-shrink-0" />
-                  <a href={`tel:${CONTACT_PHONE}`} className="hover:text-white transition-colors">+1 (555) 012-3456</a>
+                  <a href={`tel:${CONTACT_PHONE}`} className="hover:text-white transition-colors">{CONTACT_PHONE_DISPLAY}</a>
                 </li>
                 <li className="flex items-center">
                   <Mail className="w-5 h-5 mr-3 text-brand-500 flex-shrink-0" />

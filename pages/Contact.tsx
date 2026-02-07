@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ContactForm from '../components/ContactForm';
 import { MapPin, Phone, Mail, Clock, MessageSquare } from 'lucide-react';
-import { CONTACT_PHONE, CONTACT_EMAIL } from '../constants';
+import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY, CONTACT_EMAIL } from '../constants';
 
 const Contact: React.FC = () => {
   return (
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                     <h3 className="font-bold text-slate-900 mb-1">Call Us</h3>
                     <p className="text-slate-600 mb-2">Mon-Sat from 9am to 8pm</p>
                     <a href={`tel:${CONTACT_PHONE}`} className="text-lg font-bold text-brand-600 hover:text-brand-700">
-                      +1 (555) 012-3456
+                      {CONTACT_PHONE_DISPLAY}
                     </a>
                   </div>
                 </div>

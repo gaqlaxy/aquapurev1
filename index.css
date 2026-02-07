@@ -1,0 +1,85 @@
+/* Minimal utility fallbacks for CDN Tailwind setup */
+
+.line-clamp-2,
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.prose {
+  color: #334155;
+  line-height: 1.75;
+}
+
+.prose p {
+  margin: 1em 0;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.6em 0 0.6em;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+}
+
+.prose ul,
+.prose ol {
+  margin: 1em 0;
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin: 0.5em 0;
+}
+
+.prose a {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+.prose img {
+  border-radius: 1rem;
+}
+
+.prose-lg {
+  font-size: 1.125rem;
+}
+
+.prose-slate {
+  color: #334155;
+}
+
+.prose-headings\:text-slate-900 h1,
+.prose-headings\:text-slate-900 h2,
+.prose-headings\:text-slate-900 h3,
+.prose-headings\:text-slate-900 h4,
+.prose-headings\:text-slate-900 h5,
+.prose-headings\:text-slate-900 h6 {
+  color: #0f172a;
+}
+
+.prose-a\:text-brand-600 a {
+  color: #0284c7;
+}

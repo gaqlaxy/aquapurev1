@@ -15,7 +15,7 @@ import Button from "../components/Button";
 import ProductCard from "../components/ProductCard";
 import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
-import { PRODUCTS, TESTIMONIALS, CONTACT_PHONE } from "../constants";
+import { PRODUCTS, TESTIMONIALS, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from "../constants";
 
 const Home: React.FC = () => {
   const featuredProducts = PRODUCTS.slice(0, 3);
@@ -300,7 +300,7 @@ const Home: React.FC = () => {
                   className="flex items-center text-2xl font-bold hover:text-brand-100 transition-colors"
                 >
                   <Phone className="w-6 h-6 mr-3" />
-                  +1 (555) 012-3456
+                  {CONTACT_PHONE_DISPLAY}
                 </a>
               </div>
             </div>

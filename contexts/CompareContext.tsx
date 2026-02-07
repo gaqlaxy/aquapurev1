@@ -18,8 +18,16 @@ export const CompareProvider: React.FC<{ children: React.ReactNode }> = ({ child
   // Persist to local storage
   useEffect(() => {
     const saved = localStorage.getItem('compare_list');
-    if (saved) {
-      setSelectedIds(JSON.parse(saved));
+    if (!saved) return;
+    try {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.every(id => typeof id === 'string')) {
+        setSelectedIds(parsed);
+      } else {
+        localStorage.removeItem('compare_list');
+      }
+    } catch {
+      localStorage.removeItem('compare_list');
     }
   }, []);
 

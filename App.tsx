@@ -10,8 +10,19 @@ import BlogPost from './pages/BlogPost';
 import Compare from './pages/Compare';
 import Contact from './pages/Contact';
 import { CompareProvider } from './contexts/CompareContext';
+import Button from './components/Button';
 
 // Wrapper for AnimatePresence to access useLocation
+const NotFound: React.FC = () => (
+  <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
+    <h2 className="text-3xl font-bold text-slate-900 mb-3">Page Not Found</h2>
+    <p className="text-slate-600 mb-6 max-w-md">
+      The page you are looking for doesn’t exist or has been moved.
+    </p>
+    <Button onClick={() => window.location.replace('#/')}>Back to Home</Button>
+  </div>
+);
+
 const AnimatedRoutes: React.FC = () => {
   const location = useLocation();
 
@@ -26,6 +37,7 @@ const AnimatedRoutes: React.FC = () => {
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );
