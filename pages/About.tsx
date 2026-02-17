@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { Target, Heart, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import HomeServices from '../components/HomeServices';
 
 const About: React.FC = () => {
   const values = [
@@ -26,7 +27,7 @@ const About: React.FC = () => {
   return (
     <Layout>
       <SEO title="About Us" description="Learn about AquaPure's mission, history, and commitment to providing the cleanest water." />
-      
+
       {/* Hero */}
       <div className="bg-brand-900 text-white py-20">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -42,9 +43,9 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1000" 
-                alt="Our Team" 
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1000"
+                alt="Our Team"
                 className="rounded-2xl shadow-xl"
               />
             </div>
@@ -66,9 +67,11 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Services */}
+      <HomeServices />
 
       {/* Core Values */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Core Values</h2>
@@ -77,7 +80,7 @@ const About: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((val, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

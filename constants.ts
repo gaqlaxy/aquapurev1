@@ -1,4 +1,4 @@
-import { Product, Testimonial, BlogPost } from './types';
+import { Product, Testimonial, BlogPost, Service } from './types';
 
 export const PRODUCTS: Product[] = [
   {
@@ -145,6 +145,37 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'Dec 10, 2023',
     image: 'https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=800',
     category: 'Maintenance'
+  }
+];
+
+export const SERVICES: Service[] = [
+  {
+    id: 's1',
+    title: 'Installation',
+    description: 'Expert installation of all RO systems with zero mess guarantee.',
+    icon: 'wrench',
+    features: ['Professional Tools', 'Cleanup Included', 'Demo & Training']
+  },
+  {
+    id: 's2',
+    title: 'Annual Maintenance (AMC)',
+    description: 'Comprehensive maintenance plans to keep your purifier running like new.',
+    icon: 'shield',
+    features: ['3 Free Services/Year', 'Filter Replacement', 'Priority Support']
+  },
+  {
+    id: 's3',
+    title: 'Repair & Upgrade',
+    description: 'Quick diagnostics and repair for any brand of water purifier.',
+    icon: 'settings',
+    features: ['Genuine Spares', '4-Hour Response', 'Warranty on Repairs']
+  },
+  {
+    id: 's4',
+    title: 'Commercial Solutions',
+    description: 'Scalable water purification plants for offices, schools, and factories.',
+    icon: 'building',
+    features: ['Custom Capacity', 'Site Analysis', 'Compliance Certification']
   }
 ];
 

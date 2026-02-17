@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  ShieldCheck,
-  Wrench,
-  Clock,
   CheckCircle2,
   Star,
   Phone,
@@ -15,6 +12,8 @@ import Button from "../components/Button";
 import ProductCard from "../components/ProductCard";
 import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
+import HomeAbout from "../components/HomeAbout";
+import HomeServices from "../components/HomeServices";
 import { PRODUCTS, TESTIMONIALS, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from "../constants";
 
 const Home: React.FC = () => {
@@ -121,56 +120,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Highlights */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Why Choose AquaPure?
-            </h2>
-            <p className="text-slate-600">
-              We don't just sell products; we deliver a promise of purity and
-              health with unmatched service quality.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <ShieldCheck className="w-8 h-8 text-brand-600" />,
-                title: "Certified Quality",
-                desc: "All our products are ISO certified and tested for 100% purity standards.",
-              },
-              {
-                icon: <Wrench className="w-8 h-8 text-brand-600" />,
-                title: "Expert Service",
-                desc: "Highly trained technicians available 24/7 for maintenance and repairs.",
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-brand-600" />,
-                title: "Timely Delivery",
-                desc: "Quick installation and filter changes to ensure you never run out of pure water.",
-              },
-            ].map((feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.2 }}
-                viewport={{ once: true }}
-                className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow text-center"
-              >
-                <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center mx-auto mb-6">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HomeAbout />
 
       {/* Featured Products */}
       <section className="py-20 bg-slate-50">
@@ -207,6 +157,9 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Services Section */}
+      <HomeServices />
 
       {/* Testimonials */}
       <section className="py-20 bg-brand-900 relative overflow-hidden">
