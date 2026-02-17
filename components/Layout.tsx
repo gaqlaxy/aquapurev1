@@ -35,26 +35,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="bg-brand-600 p-2 rounded-lg text-white transform group-hover:rotate-12 transition-transform duration-300">
-                <Droplets className="w-6 h-6" />
-              </div>
+              {/* <img className="w-24 h-24" src="/vishali.png" alt="Logo" /> */}
               <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-slate-900 lg:text-slate-900'}`}>
-                Aqua<span className="text-brand-600">Pure</span>
+                Vishali <span className="text-brand-600">Enterprise</span>
               </span>
             </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center space-x-8">
               {navLinks.map((item) => (
-                <Link 
-                  key={item} 
+                <Link
+                  key={item}
                   to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
                   className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-brand-600 after:transition-all hover:after:w-full"
                 >
                   {item}
                 </Link>
               ))}
-              
+
               {/* Compare Icon */}
               <Link to="/compare" className="relative p-2 text-slate-600 hover:text-brand-600 transition-colors" title="Compare Products">
                 <Scale className="w-5 h-5" />
@@ -80,7 +78,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   </span>
                 )}
               </Link>
-              <button 
+              <button
                 className="p-2 text-slate-700 hover:bg-slate-100 rounded-md"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
@@ -94,20 +92,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* Mobile Nav Drawer */}
         <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-slate-100 transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="flex flex-col p-4 space-y-4">
-             {navLinks.map((item) => (
-                <Link 
-                  key={item} 
-                  to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
-                  className="text-base font-medium text-slate-700 hover:text-brand-600 px-2 py-2 rounded-md hover:bg-brand-50"
-                >
-                  {item}
-                </Link>
-              ))}
-              <div className="pt-2 border-t border-slate-100">
-                 <Button className="w-full justify-center" onClick={() => window.open(`tel:${CONTACT_PHONE}`)}>
-                  Call Now
-                </Button>
-              </div>
+            {navLinks.map((item) => (
+              <Link
+                key={item}
+                to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                className="text-base font-medium text-slate-700 hover:text-brand-600 px-2 py-2 rounded-md hover:bg-brand-50"
+              >
+                {item}
+              </Link>
+            ))}
+            <div className="pt-2 border-t border-slate-100">
+              <Button className="w-full justify-center" onClick={() => window.open(`tel:${CONTACT_PHONE}`)}>
+                Call Now
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -124,7 +122,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <div className="bg-brand-600 p-1.5 rounded-lg text-white">
-                   <Droplets className="w-5 h-5" />
+                  <Droplets className="w-5 h-5" />
                 </div>
                 <span className="text-xl font-bold text-white">
                   Aqua<span className="text-brand-500">Pure</span>
@@ -165,7 +163,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 mr-3 text-brand-500 flex-shrink-0" />
-                  <span>123 Clean Water Street,<br/>Business District, City - 500001</span>
+                  <span>123 Clean Water Street,<br />Business District, City - 500001</span>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-brand-500 flex-shrink-0" />
@@ -178,7 +176,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
             <p>&copy; {new Date().getFullYear()} AquaPure Systems. All rights reserved.</p>
           </div>
