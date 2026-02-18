@@ -338,6 +338,6 @@ export const SERVICES: Service[] = [
   }
 ];
 
-export const CONTACT_PHONE = "15550123456"; // Dummy number for WhatsApp
-export const CONTACT_PHONE_DISPLAY = "+1 (555) 012-3456";
+export const CONTACT_PHONE = "+919042534013"; // Dummy number for WhatsApp
+export const CONTACT_PHONE_DISPLAY = "+91 90425 34013";
 export const CONTACT_EMAIL = "sales@vishalienterprises.com";
