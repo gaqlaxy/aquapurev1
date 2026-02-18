@@ -97,7 +97,7 @@ const Home: React.FC = () => {
               <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-200 rounded-full blur-3xl opacity-30 mix-blend-multiply filter"></div>
               <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-teal-200 rounded-full blur-3xl opacity-30 mix-blend-multiply filter"></div>
               <img
-                src="https://media.istockphoto.com/id/1062918654/photo/ro-water-purification-system.jpg?s=1024x1024&w=is&k=20&c=qgPggrnGpjY0K11sfXiB1vC58CeNF1jQny3QIEEJVYs="
+                src="/Hero.jpg"
                 alt="Glass of pure water"
                 className="relative rounded-2xl shadow-2xl z-10 object-cover h-[500px] w-full"
               />
