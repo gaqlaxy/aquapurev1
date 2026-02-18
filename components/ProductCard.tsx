@@ -33,30 +33,29 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       className="group relative bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all duration-300 flex flex-col overflow-hidden h-full"
     >
       <div className="aspect-[4/3] overflow-hidden bg-slate-100 relative">
-        <img 
-          src={product.image} 
-          alt={product.name} 
+        <img
+          src={product.images[0]}
+          alt={product.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
         <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-brand-700 uppercase tracking-wider shadow-sm">
           {product.category}
         </div>
-        
+
         {/* Compare Button */}
-        <button 
+        <button
           onClick={toggleCompare}
-          className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-colors ${
-            isSelected 
-              ? 'bg-brand-600 text-white' 
+          className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-colors ${isSelected
+              ? 'bg-brand-600 text-white'
               : 'bg-white/90 text-slate-500 hover:text-brand-600'
-          }`}
+            }`}
           title={isSelected ? "Remove from Compare" : "Add to Compare"}
         >
           <Scale className="w-4 h-4" />
         </button>
       </div>
-      
+
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
           {product.name}
@@ -64,7 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         <p className="text-slate-600 text-sm mb-4 line-clamp-2">
           {product.description}
         </p>
-        
+
         <div className="space-y-2 mb-6 flex-grow">
           {product.features.slice(0, 3).map((feature, i) => (
             <div key={i} className="flex items-center text-xs text-slate-500">
@@ -76,7 +75,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
 
         <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
           <span className="text-lg font-bold text-brand-700">{product.price}</span>
-          <Link 
+          <Link
             to={`/product/${product.id}`}
             className="flex items-center text-sm font-semibold text-slate-900 hover:text-brand-600 transition-colors group/link"
           >

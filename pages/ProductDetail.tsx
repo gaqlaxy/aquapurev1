@@ -4,11 +4,21 @@ import { ArrowLeft, CheckCircle, Shield, Droplets, Info } from 'lucide-react';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
+import EnquiryModal from '../components/EnquiryModal';
 import { PRODUCTS, CONTACT_PHONE } from '../constants';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const product = PRODUCTS.find(p => p.id === id);
+
+  const [selectedImage, setSelectedImage] = React.useState<string>('');
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    if (product?.images?.length) {
+      setSelectedImage(product.images[0]);
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -23,18 +33,13 @@ const ProductDetail: React.FC = () => {
     );
   }
 
-  const handleEnquiry = () => {
-    const message = encodeURIComponent(`Hi, I am interested in the ${product.name}. Please provide more details.`);
-    window.open(`https://wa.me/${CONTACT_PHONE}?text=${message}`, '_blank');
-  };
-
   return (
     <Layout>
-      <SEO 
-        title={product.name} 
-        description={product.description} 
+      <SEO
+        title={product.name}
+        description={product.description}
       />
-      
+
       <div className="pt-24 pb-20 bg-slate-50 min-h-screen">
         <div className="container mx-auto px-4 md:px-6">
           <Link to="/products" className="inline-flex items-center text-slate-500 hover:text-brand-600 mb-8 transition-colors">
@@ -45,12 +50,35 @@ const ProductDetail: React.FC = () => {
           <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Image Section */}
-              <div className="p-8 lg:p-12 bg-slate-50 flex items-center justify-center">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="rounded-2xl shadow-lg max-h-[500px] w-full object-cover"
-                />
+              <div className="p-8 lg:p-12 bg-slate-50 flex flex-col gap-6">
+                <div className="aspect-[4/3] w-full bg-white rounded-2xl overflow-hidden shadow-sm">
+                  <img
+                    src={selectedImage || product.images[0]}
+                    alt={product.name}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+
+                {product.images.length > 1 && (
+                  <div className="grid grid-cols-5 gap-4">
+                    {product.images.map((img, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setSelectedImage(img)}
+                        className={`aspect-square rounded-xl overflow-hidden border-2 transition-all ${selectedImage === img
+                          ? 'border-brand-500 ring-2 ring-brand-100'
+                          : 'border-transparent hover:border-brand-200'
+                          }`}
+                      >
+                        <img
+                          src={img}
+                          alt={`${product.name} view ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Details Section */}
@@ -60,7 +88,7 @@ const ProductDetail: React.FC = () => {
                 </div>
                 <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{product.name}</h1>
                 <p className="text-xl text-brand-600 font-bold mb-6">{product.price}</p>
-                
+
                 <p className="text-slate-600 leading-relaxed mb-8">
                   {product.description}
                 </p>
@@ -103,7 +131,7 @@ const ProductDetail: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" onClick={handleEnquiry} className="flex-1">
+                  <Button size="lg" onClick={() => setIsEnquiryModalOpen(true)} className="flex-1">
                     Send Enquiry
                   </Button>
                   <Button variant="outline" size="lg" className="flex-1" onClick={() => window.open(`tel:${CONTACT_PHONE}`)}>
@@ -115,7 +143,14 @@ const ProductDetail: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <EnquiryModal
+        isOpen={isEnquiryModalOpen}
+        onClose={() => setIsEnquiryModalOpen(false)}
+        productName={product.name}
+      />
     </Layout>
+
   );
 };
 

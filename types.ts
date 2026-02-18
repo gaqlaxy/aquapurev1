@@ -5,7 +5,7 @@ export interface Product {
   price: string;
   features: string[];
   category: 'Home' | 'Commercial' | 'Industrial';
-  image: string;
+  images: string[];
   capacity: string;
   filtrationStages: string;
   warranty: string;
