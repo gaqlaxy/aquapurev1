@@ -26,7 +26,7 @@ const About: React.FC = () => {
 
   return (
     <Layout>
-      <SEO title="About Us" description="Learn about AquaPure's mission, history, and commitment to providing the cleanest water." />
+      <SEO title="About Us" description="Learn about Vishali Enterprises's mission, history, and commitment to providing the cleanest water." />
 
       {/* Hero */}
       <div className="bg-brand-900 text-white py-20">
@@ -54,7 +54,7 @@ const About: React.FC = () => {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">From a Garage to 5000+ Homes</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  AquaPure began in 2015 with a simple observation: accessing truly clean water was becoming harder and more expensive. Our founder, a chemical engineer, started assembling custom RO units in his garage to help neighbors dealing with hard water issues.
+                  Vishali Enterprises began in 2015 with a simple observation: accessing truly clean water was becoming harder and more expensive. Our founder, a chemical engineer, started assembling custom RO units in his garage to help neighbors dealing with hard water issues.
                 </p>
                 <p>
                   The word spread quickly. People loved not just the taste of the water, but the transparency and reliability of the service.

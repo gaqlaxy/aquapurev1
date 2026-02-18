@@ -241,7 +241,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: 't3',
     name: 'Mark Davis',
     role: 'Restaurant Owner',
-    content: 'Switched to AquaPure last year. The water quality consistency has helped our beverages taste better.',
+    content: 'Switched to Vishali Enterprises Aqua Jade last year. The water quality consistency has helped our beverages taste better.',
     rating: 4
   }
 ];
@@ -340,4 +340,4 @@ export const SERVICES: Service[] = [
 
 export const CONTACT_PHONE = "15550123456"; // Dummy number for WhatsApp
 export const CONTACT_PHONE_DISPLAY = "+1 (555) 012-3456";
-export const CONTACT_EMAIL = "sales@aquapure-example.com";
+export const CONTACT_EMAIL = "sales@vishalienterprises.com";

@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Link to="/" className="flex items-center space-x-2 group">
               {/* <img className="w-24 h-24" src="/vishali.png" alt="Logo" /> */}
               <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-slate-900 lg:text-slate-900'}`}>
-                Vishali <span className="text-brand-600">Enterprise</span>
+                Vishali <span className="text-brand-600">Enterprises</span>
               </span>
             </Link>
 
@@ -125,7 +125,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Droplets className="w-5 h-5" />
                 </div>
                 <span className="text-xl font-bold text-white">
-                  Aqua<span className="text-brand-500">Pure</span>
+                  Vishali<span className="text-brand-500">Enterprises</span>
                 </span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
@@ -178,7 +178,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
 
           <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
-            <p>&copy; {new Date().getFullYear()} AquaPure Systems. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Vishali Enterprises. All rights reserved.</p>
           </div>
         </div>
       </footer>

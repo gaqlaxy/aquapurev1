@@ -59,7 +59,7 @@ const HomeAbout: React.FC = () => {
                     >
                         <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold mb-6">
                             <span className="w-2 h-2 rounded-full bg-brand-600 mr-2 animate-pulse"></span>
-                            About AquaPure
+                            About Vishali Enterprises
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">
@@ -68,7 +68,7 @@ const HomeAbout: React.FC = () => {
                         </h2>
 
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                            At AquaPure, we believe access to clean water is a fundamental right, not a luxury.
+                            At Vishali Enterprises, we believe access to clean water is a fundamental right, not a luxury.
                             With over 15 years of expertise in advanced water purification technologies,
                             we combine innovation with reliability to deliver health in every drop.
                         </p>

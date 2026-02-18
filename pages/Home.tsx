@@ -33,7 +33,7 @@ const Home: React.FC = () => {
     <Layout>
       <SEO
         title="Home"
-        description="AquaPure offers the best RO water purifiers and maintenance services for homes and offices. Get pure, healthy water today."
+        description="Vishali Enterprises offers the best RO water purifiers and maintenance services for homes and offices. Get pure, healthy water today."
       />
 
       {/* Hero Section */}

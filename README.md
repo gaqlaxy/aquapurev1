@@ -1,6 +1,6 @@
-# AquaPure Systems
+# Vishali Enterprises
 
-AquaPure Systems is a React-based application that provides a user-friendly interface for customers to explore and purchase water purification systems. The application is designed to be scalable, maintainable, and easy to use.
+Vishali Enterprises is a React-based application that provides a user-friendly interface for customers to explore and purchase water purification systems. The application is designed to be scalable, maintainable, and easy to use.
 
 ## Features
 

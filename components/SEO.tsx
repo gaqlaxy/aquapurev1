@@ -8,7 +8,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ title, description, image }) => {
   useEffect(() => {
-    document.title = `${title} | AquaPure Systems`;
+    document.title = `${title} | Vishali Enterprises`;
     const upsertMeta = (selector: string, attrs: Record<string, string>) => {
       let el = document.querySelector<HTMLMetaElement>(selector);
       if (!el) {
@@ -22,7 +22,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image }) => {
     };
 
     const canonicalUrl = window.location.href;
-    const siteName = 'AquaPure Systems';
+    const siteName = 'Vishali Enterprises';
     const descriptionContent = description ?? 'Premium RO Water Purifier sales and service provider.';
 
     const setCanonical = (href: string) => {
