@@ -212,7 +212,7 @@ const Home: React.FC = () => {
               What Our Clients Say
             </h2>
             <p className="text-brand-200">
-              Trusted by over 5,000 satisfied families and businesses.
+              Trusted by over 1,000 satisfied families and businesses.
             </p>
           </div>
 

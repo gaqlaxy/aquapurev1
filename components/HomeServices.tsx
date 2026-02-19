@@ -53,9 +53,9 @@ const HomeServices: React.FC = () => {
                                 ))}
                             </ul>
 
-                            <Link to="/contact" className="mt-auto">
+                            <Link to={`/service/${service.id}`} className="mt-auto">
                                 <Button variant="outline" className="w-full justify-between group-hover:border-brand-200 group-hover:bg-brand-50/50">
-                                    Book Now
+                                    Learn More
                                     <ChevronRight className="w-4 h-4" />
                                 </Button>
                             </Link>

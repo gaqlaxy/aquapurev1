@@ -6,6 +6,7 @@ import WhatsAppFloat from './WhatsAppFloat';
 import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY, CONTACT_EMAIL } from '../constants';
 import { useCompare } from '../contexts/CompareContext';
 
+
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -26,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     setIsMenuOpen(false);
   }, [location]);
 
-  const navLinks = ['Home', 'Products', 'About', 'Blog', 'Contact'];
+  const navLinks = ['Home', 'Products', 'Services', 'About'];
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
@@ -63,9 +64,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 )}
               </Link>
 
-              <Button size="sm" onClick={() => window.open(`tel:${CONTACT_PHONE}`)}>
-                Call Expert
-              </Button>
+              {/* <Button size="sm" onClick={() => window.open(`tel:${CONTACT_PHONE}`)}>
+                Contact
+              </Button> */}
+
+              {/* Link to contact  */}
+
+              <Link to="/contact">
+                <Button size="sm">Contact</Button>
+              </Link>
+
             </nav>
 
             {/* Mobile Menu Button */}
@@ -103,7 +111,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             ))}
             <div className="pt-2 border-t border-slate-100">
               <Button className="w-full justify-center" onClick={() => window.open(`tel:${CONTACT_PHONE}`)}>
-                Call Now
+                Contact Option
               </Button>
             </div>
           </div>
@@ -151,10 +159,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h4 className="text-white font-semibold mb-6">Services</h4>
               <ul className="space-y-3 text-sm">
-                <li><span className="cursor-pointer hover:text-brand-400 transition-colors">RO Installation</span></li>
-                <li><span className="cursor-pointer hover:text-brand-400 transition-colors">Annual Maintenance (AMC)</span></li>
-                <li><span className="cursor-pointer hover:text-brand-400 transition-colors">Filter Replacement</span></li>
-                <li><span className="cursor-pointer hover:text-brand-400 transition-colors">Water Testing</span></li>
+                <li><Link to="/service/s1" className="hover:text-brand-400 transition-colors">RO Installation</Link></li>
+                <li><Link to="/service/s2" className="hover:text-brand-400 transition-colors">Annual Maintenance (AMC)</Link></li>
+                <li><Link to="/service/s3" className="hover:text-brand-400 transition-colors">Repair & Upgrade</Link></li>
+                <li><Link to="/service/s4" className="hover:text-brand-400 transition-colors">Commercial Solutions</Link></li>
               </ul>
             </div>
 
@@ -163,7 +171,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 mr-3 text-brand-500 flex-shrink-0" />
-                  <span>123 Clean Water Street,<br />Business District, City - 500001</span>
+                  <span>42b, Viduthalai Nagar, 2nd Street,<br />S.Kolathur, Chennai - 600129</span>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-brand-500 flex-shrink-0" />

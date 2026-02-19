@@ -104,9 +104,9 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { num: '8+', label: 'Years Experience' },
-              { num: '5000+', label: 'Happy Customers' },
-              { num: '50+', label: 'Expert Technicians' },
+              { num: '5+', label: 'Years Experience' },
+              { num: '1000+', label: 'Happy Customers' },
+              { num: '10+', label: 'Expert Technicians' },
               { num: '24/7', label: 'Support Available' }
             ].map((stat, i) => (
               <div key={i}>

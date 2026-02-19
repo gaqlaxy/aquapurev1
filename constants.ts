@@ -225,23 +225,23 @@ export const PRODUCTS: Product[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
-    name: 'Sarah Johnson',
+    name: 'Kumaresan',
     role: 'Homeowner',
     content: 'The installation was quick and the water tastes amazing. The service team is very responsive.',
     rating: 5
   },
   {
     id: 't2',
-    name: 'Dr. Emily Chen',
-    role: 'Clinic Manager',
+    name: 'Kamal',
+    role: 'Dental Clinic Admin',
     content: 'We use their commercial unit in our dental clinic. Reliable performance and excellent maintenance service.',
     rating: 5
   },
   {
     id: 't3',
-    name: 'Mark Davis',
+    name: 'Karthik',
     role: 'Restaurant Owner',
-    content: 'Switched to Vishali Enterprises Aqua Jade last year. The water quality consistency has helped our beverages taste better.',
+    content: 'Switched to Vishali Enterprises Aqua Jade last year. The water quality consistency was excellent',
     rating: 4
   }
 ];
@@ -265,7 +265,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>A TDS meter reading above 200 ppm usually suggests that the water requires advanced purification like Reverse Osmosis.</p>
     `,
     author: 'Dr. Alan Grant',
-    date: 'Oct 15, 2023',
+    date: 'Oct 15, 2025',
     image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=800',
     category: 'Water Quality'
   },
@@ -283,7 +283,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>If your water tastes salty (High TDS), go for RO. If it tastes sweet but you are worried about germs, UV is sufficient. Modern systems often combine RO+UV for complete protection.</p>
     `,
     author: 'Sarah Connor',
-    date: 'Nov 02, 2023',
+    date: 'Nov 02, 2025',
     image: 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=800',
     category: 'Technology'
   },
@@ -301,7 +301,7 @@ export const BLOG_POSTS: BlogPost[] = [
       </ul>
     `,
     author: 'Mike Ross',
-    date: 'Dec 10, 2023',
+    date: 'Dec 10, 2025',
     image: 'https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=800',
     category: 'Maintenance'
   }
@@ -339,5 +339,5 @@ export const SERVICES: Service[] = [
 ];
 
 export const CONTACT_PHONE = "+919042534013"; // Dummy number for WhatsApp
-export const CONTACT_PHONE_DISPLAY = "+91 90425 34013";
+export const CONTACT_PHONE_DISPLAY = "+91 9042534013";
 export const CONTACT_EMAIL = "sales@vishalienterprises.com";

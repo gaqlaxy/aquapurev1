@@ -1,14 +1,16 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from './pages/Home';
 import AllProducts from './pages/AllProducts';
 import ProductDetail from './pages/ProductDetail';
+import Services from './pages/Services';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Compare from './pages/Compare';
 import Contact from './pages/Contact';
+import ServiceDetail from './pages/ServiceDetail';
 import { CompareProvider } from './contexts/CompareContext';
 import Button from './components/Button';
 
@@ -28,15 +30,17 @@ const AnimatedRoutes: React.FC = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<AllProducts />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/service/:id" element={<ServiceDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
