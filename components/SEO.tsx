@@ -4,9 +4,10 @@ interface SEOProps {
   title: string;
   description?: string;
   image?: string;
+  schema?: object;
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, image }) => {
+const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
   useEffect(() => {
     document.title = `${title} | Vishali Enterprises`;
     const upsertMeta = (selector: string, attrs: Record<string, string>) => {
@@ -54,9 +55,23 @@ const SEO: React.FC<SEOProps> = ({ title, description, image }) => {
     }
     setCanonical(canonicalUrl);
 
+    // Structured Data (JSON-LD)
+    if (schema) {
+      let script = document.querySelector<HTMLScriptElement>('script[type="application/ld+json"]');
+      if (!script) {
+        script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(schema);
+    } else {
+      const script = document.querySelector<HTMLScriptElement>('script[type="application/ld+json"]');
+      if (script) script.remove();
+    }
+
     // Scroll to top on route change (basic SEO/UX requirement)
     window.scrollTo(0, 0);
-  }, [title, description, image]);
+  }, [title, description, image, schema]);
 
   return null;
 };

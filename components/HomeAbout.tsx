@@ -20,7 +20,7 @@ const HomeAbout: React.FC = () => {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                             <img
                                 src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1588&auto=format&fit=crop"
-                                alt="Clean water pouring into glass"
+                                alt="Clear purified water being poured into a glass - Vishali Enterprises RO Solutions"
                                 className="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

@@ -35,7 +35,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       <div className="aspect-[4/3] overflow-hidden bg-slate-100 relative">
         <img
           src={product.images[0]}
-          alt={product.name}
+          alt={`${product.name} RO Water Purifier by Vishali Enterprises`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
@@ -47,8 +47,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         <button
           onClick={toggleCompare}
           className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-colors ${isSelected
-              ? 'bg-brand-600 text-white'
-              : 'bg-white/90 text-slate-500 hover:text-brand-600'
+            ? 'bg-brand-600 text-white'
+            : 'bg-white/90 text-slate-500 hover:text-brand-600'
             }`}
           title={isSelected ? "Remove from Compare" : "Add to Compare"}
         >

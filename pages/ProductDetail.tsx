@@ -38,6 +38,24 @@ const ProductDetail: React.FC = () => {
       <SEO
         title={product.name}
         description={product.description}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": product.name,
+          "description": product.description,
+          "image": product.images.map(img => `https://aquapuresystems.vercel.app${img}`),
+          "offers": {
+            "@type": "Offer",
+            "url": window.location.href,
+            "priceCurrency": "INR",
+            "price": product.price.replace(/[^0-9]/g, ''),
+            "availability": "https://schema.org/InStock"
+          },
+          "brand": {
+            "@type": "Brand",
+            "name": "Vishali Enterprises"
+          }
+        }}
       />
 
       <div className="pt-24 pb-20 bg-slate-50 min-h-screen">

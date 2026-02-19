@@ -1,2 +1,25 @@
-User-agent: *
+# Block aggressive AI crawlers to save bandwidth
+User-agent: GPTBot
 Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# Allow major search engines but request a delay
+User-agent: *
+Allow: /
+Crawl-delay: 10
+
+Sitemap: https://aquapuresystems.vercel.app/sitemap.xml

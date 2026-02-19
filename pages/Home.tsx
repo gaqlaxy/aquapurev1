@@ -34,6 +34,41 @@ const Home: React.FC = () => {
       <SEO
         title="Home"
         description="Vishali Enterprises offers the best RO water purifiers and maintenance services for homes and offices. Get pure, healthy water today."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Vishali Enterprises",
+          "image": "https://aquapuresystems.vercel.app/Hero.jpg",
+          "@id": "https://aquapuresystems.vercel.app/",
+          "url": "https://aquapuresystems.vercel.app/",
+          "telephone": "+919042534013",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Tamil Nadu",
+            "addressRegion": "TN",
+            "postalCode": "",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 0,
+            "longitude": 0
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        }}
       />
 
       {/* Hero Section */}
