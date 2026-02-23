@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, LazyMotion, domAnimation, MotionConfig } from 'framer-motion';
 import Home from './pages/Home';
 import AllProducts from './pages/AllProducts';
 import ProductDetail from './pages/ProductDetail';
@@ -51,7 +51,11 @@ const App: React.FC = () => {
   return (
     <CompareProvider>
       <Router>
-        <AnimatedRoutes />
+        <LazyMotion features={domAnimation}>
+          <MotionConfig reducedMotion="user">
+            <AnimatedRoutes />
+          </MotionConfig>
+        </LazyMotion>
       </Router>
     </CompareProvider>
   );
