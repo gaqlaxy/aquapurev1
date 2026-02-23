@@ -22,4 +22,4 @@ User-agent: *
 Allow: /
 Crawl-delay: 10
 
-Sitemap: https://aquapuresystems.vercel.app/sitemap.xml
+Sitemap: https://www.vishalienterprises.com/sitemap.xml
