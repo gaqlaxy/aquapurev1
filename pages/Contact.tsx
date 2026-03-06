@@ -41,8 +41,8 @@ const Contact: React.FC = () => {
                   <div>
                     <h3 className="font-bold text-slate-900 mb-1">Visit Our Store</h3>
                     <p className="text-slate-600">
-                      123 Clean Water Street,<br />
-                      Business District, City - 500001
+                      42b, Viduthalai Nagar, 2nd Street,<br />
+                      S.Kolathur, Chennai - 600129
                     </p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
               {/* Map Placeholder */}
               <div className="bg-slate-200 rounded-2xl h-64 w-full flex items-center justify-center text-slate-400 overflow-hidden border border-slate-300">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1629783344691!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d376.0972113309277!2d80.19664521966638!3d12.946084438916031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525db67b016885%3A0x991a77539d620141!2sVISHALI%20ENTERPRISES%20AQUA%20RO%20SHOP!5e0!3m2!1sen!2sin!4v1772779341784!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -103,6 +103,7 @@ const Contact: React.FC = () => {
                   loading="lazy"
                   title="Google Maps"
                 ></iframe>
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d376.0972113309277!2d80.19664521966638!3d12.946084438916031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525db67b016885%3A0x991a77539d620141!2sVISHALI%20ENTERPRISES%20AQUA%20RO%20SHOP!5e0!3m2!1sen!2sin!4v1772779341784!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
               </div>
             </div>
 
